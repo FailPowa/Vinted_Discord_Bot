@@ -2,6 +2,10 @@
 
 - [x] Création du git
 - [x] Documentation
+- [ ] Modification des commandes
+  - [ ] `/get-url` devient `/set-url` et permettra de sauvegardé une recherche sur un canal
+  - [ ] `/get-vetements` exécutera la recherche du canal où elle a été appelée
+  - [ ] `/get-one` affichera le premier produit sortant d'une recherche spontannée ( sans sauvegarder la recherche )
 - [ ] Gestion des erreurs de l'API Vinted en cas de Token Invalide
 - [ ] Automatiser la récupération du token s'il n'est pas déjà présent
 - [ ] Sauvegarder les urls et channels associés ( ex1 )
