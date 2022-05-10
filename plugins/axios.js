@@ -2,6 +2,9 @@
 
 import axios from 'axios'
 
+/**
+ * Utilisation de la librairie Axios pour les requêtes à l'API Vinted
+ */
 const instance = axios.create({
   baseURL: 'https://www.vinted.fr/',
   headers: {
@@ -12,15 +15,3 @@ const instance = axios.create({
 });
 
 export default instance;
-
-/**
- * Pour la communication avec l'API Vinted
- * BASE_URL: https://www.vinted.fr/api/v2/catalog/items
- * 
- * Header Type Postman à construire avec récupération et refresh du token
- * https://github.com/aime-risson/vinted-api-wrapper/blob/bda81f5b2cb6d554546763daec0605d44210839f/src/pyVinted/requester.py
- * 
- * Matching des paramètres de l'url de nico à l'url API
- * https://github.com/aime-risson/vinted-api-wrapper/blob/bda81f5b2cb6d554546763daec0605d44210839f/src/pyVinted/items/items.py
- * 
- */

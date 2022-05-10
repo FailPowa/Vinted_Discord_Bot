@@ -4,7 +4,9 @@ import { Routes } from 'discord-api-types/v9';
 import { config } from 'dotenv';
 config();
 
-
+/**
+ * Création des SlashCommand ( commandes utilisables avec / )
+ */
 const commands = [
 	new SlashCommandBuilder()
 		.setName('ez')
@@ -28,6 +30,11 @@ const commands = [
 
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
+/**
+ * Envoi des commandes au serveur Discord
+ * Les commandes sont enregistrées par le serveur et sont retrouvables comme suit
+ * Paramètres du serveur => Intégrations => [Nom du bot]
+ */
 rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.SERVER_ID), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
 	.catch(console.error);
